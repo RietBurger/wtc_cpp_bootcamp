@@ -1,0 +1,22 @@
+// system_profiler -> all hardware info it seems
+
+    //hostname  = hostname. ret -> str /username = whoami. ret -> str
+    // OS info = sw_vers -> arr[3] strings
+    // date / time = date -> str
+
+    //cpu (general/all cpu info: sysctl -a | grep machdep.cpu)
+    //----(model, clock speed, number of cores, activity, etc)
+    // model = sysctl -n machdep.cpu.brand_string .
+    // format.. chip bran - processor type and chip model, cpu speed(this is clock speed)
+    // -> string
+    // clock speed (covered in cpu speed)
+    // number of cores = machdep.cpu.core_count -> int
+    // activity = top (| grep Processes, etc.) -> ...
+    // activity one line at a time: top -n0 -l1 | grep Processes
+    // eg of an activity: CPU usage = top | grep "CPU usage:" -> ...
+
+    //RAM = system_profiler SPHardwareDataType -> ***arr[] strings
+
+    //network throughput
+
+    // system("sysctl -n vm.swapusage");
